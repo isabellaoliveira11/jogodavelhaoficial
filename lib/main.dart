@@ -80,7 +80,7 @@ class _JogoDaVelhaState extends State<JogoDaVelha> {
         title: const Text("Jogo da Velha"),
         backgroundColor: Colors.deepPurple,
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white, // Fundo branco na tela principal
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -105,7 +105,7 @@ class _JogoDaVelhaState extends State<JogoDaVelha> {
                     : (isXTurn ? "É a vez do X" : "É a vez do O"),
                 style: TextStyle(
                   fontSize: 24,
-                  color: Colors.white,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -114,6 +114,10 @@ class _JogoDaVelhaState extends State<JogoDaVelha> {
               child: Container(
                 width: boxSize * 3,
                 height: boxSize * 3,
+                decoration: BoxDecoration(
+                  color: Colors.black, // Fundo preto apenas para a área do jogo
+                  borderRadius: BorderRadius.circular(8),
+                ),
                 child: GridView.builder(
                   shrinkWrap: true,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
